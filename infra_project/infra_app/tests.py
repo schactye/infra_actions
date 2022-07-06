@@ -1,5 +1,3 @@
-# infra_project/infra_app/tests.py
-
 from http import HTTPStatus
 
 from django.test import Client, TestCase
@@ -14,7 +12,7 @@ class StaticPagesURLTests(TestCase):
         response = self.guest_client.get('/')
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
-        response = self.guest_client.get('/second_page/')
+        response = self.guest_client.get('/second/')
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
     def test_page_shows_correct_content(self):
